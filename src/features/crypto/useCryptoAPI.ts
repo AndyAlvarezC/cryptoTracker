@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export async function fetchTop100Cryptos() {
+export async function fetchTopCryptos(page: number = 1) {
   try {
     const response = await axios.get(
       "https://api.coingecko.com/api/v3/coins/markets",
@@ -8,8 +8,8 @@ export async function fetchTop100Cryptos() {
         params: {
           vs_currency: "usd",
           order: "market_cap_desc",
-          per_page: 100,
-          page: 1,
+          per_page: 50,
+          page,
           sparkline: false,
         },
       }
