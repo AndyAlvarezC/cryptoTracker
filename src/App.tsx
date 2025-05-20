@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar';
+import CryptoList from './features/crypto/CryptoList';
 import './index.css'
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
         <h1 className="text-[var(--color-text-primary)] text-3xl font-bold transition-transform duration-300 hover:scale-105 hover:text-[var(--color-accent)] cursor-pointer">CryptoTracker</h1>
         <Navbar />
         <SearchBar />
+      </div>
+      <div>
+        <CryptoList />
       </div>
     </div>
   );
